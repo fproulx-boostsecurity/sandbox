@@ -6,5 +6,5 @@ runs:
     - name: Only do this on push to protected main branch
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
-        This is sensitive!
+        echo "This is sensitive!"
       shell: bash
