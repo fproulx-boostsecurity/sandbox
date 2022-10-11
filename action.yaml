@@ -4,7 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: Only do this on push to protected main branch
-      if: github.event_name == 'push' and github.ref == 'refs/heads/main'
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
         This is sensitive!
       shell: bash
